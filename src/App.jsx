@@ -9,7 +9,7 @@ import { useAuthStore } from "./store/authStore";
 import { useEffect } from "react";
 import NoAccess from "./pages/NoAccess";
 
-const ProtectedRoutes = ({ childred }) => {
+const ProtectedRoutes = ({ children }) => {
   const { isAuthenticated, user } = useAuthStore();
 
   if (!isAuthenticated) {
@@ -24,7 +24,7 @@ const ProtectedRoutes = ({ childred }) => {
     return <Navigate to="/verify-email" replace />;
   }
 
-  return childred;
+  return children;
 };
 
 // redirect authenticated users to the home page
