@@ -26,7 +26,7 @@ const ProtectedRoutes = ({ children }) => {
 
   return children;
 };
-
+wd;
 // redirect authenticated users to the home page
 const RedirectAuthenticatedUser = ({ children }) => {
   const { isAuthenticated, user } = useAuthStore();
